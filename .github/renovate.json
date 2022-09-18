@@ -49,6 +49,11 @@
       "matchUpdateTypes": [
         "major"
       ],
+      "excludePackageNames": [
+        "mdx-react",
+        "react",
+        "react-dom"
+      ],
       "labels": [
         "dependencies",
         "breaking"
