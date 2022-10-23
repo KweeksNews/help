@@ -1,0 +1,37 @@
+@import url(https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #dd9933;
+  --ifm-color-primary-dark: #d28c23;
+  --ifm-color-primary-darker: #c68421;
+  --ifm-color-primary-darkest: #a36d1b;
+  --ifm-color-primary-light: #e1a54a;
+  --ifm-color-primary-lighter: #e3aa56;
+  --ifm-color-primary-lightest: #e9bc79;
+  --ifm-code-font-size: 95%;
+  --ifm-font-family-base: 'Quicksand';
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #dd9933;
+  --ifm-color-primary-dark: #d28c23;
+  --ifm-color-primary-darker: #c68421;
+  --ifm-color-primary-darkest: #a36d1b;
+  --ifm-color-primary-light: #e1a54a;
+  --ifm-color-primary-lighter: #e3aa56;
+  --ifm-color-primary-lightest: #e9bc79;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}

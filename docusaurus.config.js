@@ -1,8 +1,5 @@
 // @ts-check
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-
 /** @type {import('@docusaurus/types').Config} */
 module.exports = {
   title: 'KweeksHelp',
@@ -29,7 +26,7 @@ module.exports = {
         },
         blog: false,
         theme: {
-          customCss: require.resolve('./src/styles/global.css'),
+          customCss: require.resolve('./src/styles/globals.css'),
         },
       }),
     ],
@@ -50,12 +47,11 @@ module.exports = {
         },
       },
       footer: {
-        style: 'dark',
         copyright: `© ${new Date().getFullYear()} KweeksNews Network. All rights reserved.`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: require('prism-react-renderer/themes/github'),
+        darkTheme: require('prism-react-renderer/themes/vsDark'),
       },
     }),
 };
