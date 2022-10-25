@@ -1,23 +1,24 @@
 import React from 'react';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Head from '@docusaurus/Head';
 import Layout from '@theme/Layout';
-import { HomepageFeatures } from '@site/src/components';
+import { config } from '../config';
+import { HelpfulDocs, Hero } from '../components/home';
 
 export default function Home() {
-  const { siteConfig } = useDocusaurusContext();
   return (
-    <Layout description="Description will go into a meta tag in <head />">
-      <header className="hero hero--primary px-8 py-24 text-center lg:px-16">
-        <div className="container">
-          <h1 className="mb-4 text-2xl font-semibold">Selamat Datang di Pusat Bantuan</h1>
-          <p className="text-5xl font-bold">Apa yang bisa kami bantu?</p>
-        </div>
-      </header>
+    <>
+      <Head>
+        <title>KweeksHelp - Pusat Bantuan</title>
+      </Head>
+      <Layout description="Pusat bantuan yang berisi informasi dan dokumentasi mengenai penggunaan layanan-layanan KweeksNews Network.">
+        <header>
+          <Hero />
+        </header>
 
-      <main>
-        <HomepageFeatures />
-      </main>
-    </Layout>
+        <main>
+          <HelpfulDocs docs={config.docs} />
+        </main>
+      </Layout>
+    </>
   );
 }

@@ -55,7 +55,7 @@ module.exports = {
         },
       },
       footer: {
-        copyright: `© ${new Date().getFullYear()} KweeksNews Network. All rights reserved.`,
+        copyright: `&copy; ${new Date().getFullYear()} <span tabIndex=0>KweeksNews Network</span>. All Rights Reserved.`,
       },
       prism: {
         theme: require('prism-react-renderer/themes/github'),

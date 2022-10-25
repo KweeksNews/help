@@ -4,11 +4,101 @@
 @tailwind components;
 @tailwind utilities;
 
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: theme(colors.chinese-black.600)
+      theme(colors.chinese-black.900);
+  }
+
+  body::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+
+  body::-webkit-scrollbar-track {
+    background-color: var(--ifm-background-color);
+  }
+
+  body::-webkit-scrollbar-thumb {
+    @apply bg-chinese-black-700 border-2 border-solid border-chinese-black-900 rounded-xl;
+  }
+
+  body::-webkit-scrollbar-thumb:hover {
+    @apply bg-chinese-black-600;
+  }
+
+  a,
+  button {
+    @apply inline-block box-border transition-all;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  a:focus,
+  button:focus {
+    @apply outline-dashed outline-2 outline-offset-4 outline-tigers-eye;
+  }
+
+  a:focus:not(:focus-visible):not(:active),
+  button:focus:not(:focus-visible):not(:active) {
+    @apply outline-none outline-offset-0;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    @apply outline-dashed outline-2 outline-offset-4 outline-tigers-eye;
+  }
+
+  a:active,
+  button:active {
+    @apply outline outline-2 outline-offset-4 outline-tigers-eye;
+  }
+}
+
+@layer components {
+  .button {
+    @apply px-3.5 py-2 bg-transparent border-solid border-2 border-tigers-eye font-semibold text-sm text-tigers-eye rounded-lg;
+  }
+
+  .button:hover,
+  .button:focus,
+  .button:focus-visible {
+    @apply bg-tigers-eye border-transparent text-white dark:text-black;
+  }
+
+  .link {
+    @apply text-tigers-eye;
+  }
+
+  .link::after {
+    @apply content-[''] relative block w-0 h-[1px] mx-auto bottom-0.5 bg-tigers-eye opacity-80 transition-all;
+  }
+
+  .link:focus,
+  .link:focus-visible,
+  .link:active {
+    @apply outline-none outline-0 outline-offset-0;
+  }
+
+  .link:hover::after,
+  .link:focus::after,
+  .link:focus-visible::after,
+  .link:active::after {
+    @apply w-full;
+  }
+
+  .doccard {
+    @apply w-full max-w-xs p-6 mx-auto border border-solid border-gray-200 rounded-xl shadow-[0_1.5px_3px_0_rgba(0,0,0,0.15)] text-left transition-all duration-200 ease-in-out dark:bg-[var(--ifm-card-background-color)] dark:border-gray-700 dark:shadow-none;
+  }
+
+  .doccard:hover {
+    @apply border-tigers-eye no-underline dark:border-tigers-eye;
+  }
+
+  .doccard:focus:not(:focus-visible):not(:active) {
+    @apply outline-0;
+  }
+}
 
 /* You can override the default Infima variables here. */
 :root {
@@ -34,4 +124,61 @@
   --ifm-color-primary-lighter: #e3aa56;
   --ifm-color-primary-lightest: #e9bc79;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+aside.theme-doc-sidebar-container {
+  position: relative;
+  clip-path: inset(0px -140px);
+}
+
+.theme-doc-sidebar-container button[title='Collapse sidebar'],
+.theme-doc-sidebar-container div[title='Expand sidebar'] {
+  position: absolute;
+  top: 96px;
+  right: -14px;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 4px;
+  z-index: 10;
+  background-size: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--ifm-background-surface-color);
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.707 4.293a1 1 0 0 1 0 1.414L9.414 12l6.293 6.293a1 1 0 0 1-1.414 1.414l-7-7a1 1 0 0 1 0-1.414l7-7a1 1 0 0 1 1.414 0Z' fill='%23181818'/%3E%3C/svg%3E");
+}
+
+.theme-doc-sidebar-container div[title='Expand sidebar'] {
+  position: sticky;
+  margin-left: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.293 4.293a1 1 0 0 0 0 1.414L14.586 12l-6.293 6.293a1 1 0 1 0 1.414 1.414l7-7a1 1 0 0 0 0-1.414l-7-7a1 1 0 0 0-1.414 0Z' fill='%23181818'/%3E%3C/svg%3E");
+}
+
+[data-theme='dark']
+  .theme-doc-sidebar-container
+  button[title='Collapse sidebar'] {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.707 4.293a1 1 0 0 1 0 1.414L9.414 12l6.293 6.293a1 1 0 0 1-1.414 1.414l-7-7a1 1 0 0 1 0-1.414l7-7a1 1 0 0 1 1.414 0Z' fill='%23ffffff'/%3E%3C/svg%3E");
+}
+
+[data-theme='dark'] .theme-doc-sidebar-container div[title='Expand sidebar'] {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.293 4.293a1 1 0 0 0 0 1.414L14.586 12l-6.293 6.293a1 1 0 1 0 1.414 1.414l7-7a1 1 0 0 0 0-1.414l-7-7a1 1 0 0 0-1.414 0Z' fill='%23ffffff'/%3E%3C/svg%3E");
+}
+
+.theme-doc-sidebar-container
+  :is(div[title='Expand sidebar'], button[title='Collapse sidebar'])
+  svg {
+  display: none;
+}
+
+.footer {
+  @apply px-6 py-4 bg-black;
+}
+
+.footer__copyright {
+  @apply text-xs text-center text-white;
+}
+
+.footer__copyright span {
+  @apply link inline-block text-tigers-eye;
 }
