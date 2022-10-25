@@ -9,6 +9,7 @@
   "globals": {
     "JSX": true
   },
+  "parser": "@typescript-eslint/parser",
   "plugins": [
     "@docusaurus"
   ]
