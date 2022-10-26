@@ -126,6 +126,10 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+.navbar__items .navbar__brand {
+  @apply max-[996px]:mx-auto max-[996px]:pr-[30px];
+}
+
 aside.theme-doc-sidebar-container {
   position: relative;
   clip-path: inset(0px -140px);
