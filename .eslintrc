@@ -12,5 +12,8 @@
   "parser": "@typescript-eslint/parser",
   "plugins": [
     "@docusaurus"
-  ]
+  ],
+  "rules": {
+    "import/no-unresolved": 0
+  }
 }
