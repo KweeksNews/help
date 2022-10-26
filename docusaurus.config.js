@@ -28,6 +28,10 @@ module.exports = {
         theme: {
           customCss: require.resolve('./src/styles/globals.css'),
         },
+        gtag: {
+          trackingID: 'G-1H2GEREG4Z',
+          anonymizeIP: true,
+        },
       }),
     ],
   ],
