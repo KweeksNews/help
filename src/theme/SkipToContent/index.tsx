@@ -1,5 +1,6 @@
 import React from 'react';
 import Translate, { translate } from '@docusaurus/Translate';
+// @ts-ignore
 import { useSkipToContent } from '@docusaurus/theme-common/internal';
 
 export default function SkipToContent() {
