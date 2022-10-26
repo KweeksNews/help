@@ -17,15 +17,15 @@
   }
 
   body::-webkit-scrollbar-track {
-    background-color: var(--ifm-background-color);
+    @apply bg-white dark:bg-[var(--ifm-background-color)];
   }
 
   body::-webkit-scrollbar-thumb {
-    @apply bg-chinese-black-700 border-2 border-solid border-chinese-black-900 rounded-xl;
+    @apply bg-gray-400 border-2 border-solid border-white rounded-xl dark:bg-gray-700 dark:border-[var(--ifm-background-color)];
   }
 
   body::-webkit-scrollbar-thumb:hover {
-    @apply bg-chinese-black-600;
+    @apply bg-gray-500 dark:bg-gray-600;
   }
 
   a,
