@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
+    "lint": "eslint . --ext .ts,.tsx",
+    "format": "eslint . --ext .ts,.tsx --fix",
     "start": "docusaurus start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
