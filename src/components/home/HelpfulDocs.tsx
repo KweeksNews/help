@@ -14,10 +14,10 @@ type Props = {
 export function HelpfulDocs({ docs }: Props) {
   return (
     <section className="max-w-6xl px-8 py-20 flex flex-col justify-center items-center mx-auto md:flex-row">
-      <div className="text-center md:flex-1">
-        <HelpfulImg className="w-[400px] px-8" role="img" />
+      <div className="text-center md:pr-8 md:flex-1">
+        <HelpfulImg className="w-full max-w-[400px]" role="img" />
       </div>
-      <div className="text-center md:pl-8 md:flex-[2_2_0%]">
+      <div className="text-center md:pl-8 md:flex-1 lg:flex-[2_2_0%]">
         <h2 className="mb-12 text-3xl font-bold leading-snug">
           Paling Sering Ditanyakan
         </h2>
