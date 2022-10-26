@@ -172,11 +172,11 @@ aside.theme-doc-sidebar-container {
 }
 
 .footer {
-  @apply px-6 py-4 bg-black;
+  @apply px-6 py-4 bg-gray-100 dark:bg-black;
 }
 
 .footer__copyright {
-  @apply text-xs text-center text-white;
+  @apply text-xs text-center text-black dark:text-white;
 }
 
 .footer__copyright span {
