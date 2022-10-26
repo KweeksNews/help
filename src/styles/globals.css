@@ -126,8 +126,12 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+.navbar__inner .navbar__items:first-of-type {
+  @apply max-[996px]:pr-[calc(0.5rem+30px)];
+}
+
 .navbar__items .navbar__brand {
-  @apply max-[996px]:mx-auto max-[996px]:pr-[30px];
+  @apply max-[996px]:mx-auto;
 }
 
 aside.theme-doc-sidebar-container {
