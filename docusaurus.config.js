@@ -53,6 +53,18 @@ module.exports = {
           src: 'assets/images/kweekshelp.svg',
           href: '/',
         },
+        items: [
+          {
+            label: 'Network',
+            href: 'https://network.kweeksnews.com',
+            position: 'right',
+          },
+          {
+            label: 'Status',
+            href: 'https://status.kweeksnews.com',
+            position: 'right',
+          },
+        ],
       },
       footer: {
         copyright: `&copy; ${new Date().getFullYear()} <span tabIndex=0>KweeksNews Network</span>. All Rights Reserved.`,
