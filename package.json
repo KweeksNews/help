@@ -1,7 +1,9 @@
 {
   "name": "@kweeksnews-network/help",
+  "description": "KweeksNews Help Center",
   "version": "0.1.0",
-  "private": true,
+  "author": "KweeksDev <admin@kweeksnews.com>",
+  "license": "GPL-3.0-or-later",
   "scripts": {
     "docusaurus": "docusaurus",
     "lint": "eslint . --ext .ts,.tsx",
