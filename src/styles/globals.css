@@ -30,7 +30,7 @@
 
   a,
   button {
-    @apply inline-block box-border transition-all;
+    @apply inline-block box-border !transition-all;
     -webkit-tap-highlight-color: transparent;
   }
 
