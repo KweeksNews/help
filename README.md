@@ -1,8 +1,38 @@
-# <p align="center"><img width="40%" src="https://webhook.kweeksnews.com/assets/img/kweekshelp.svg"></p>
+# <p align="center"><img width="40%" src="https://network.kweeksnews.com/assets/img/kweekshelp.svg"></p>
 
 ## Introduction
 
-KweeksHelp (KweeksNews Help Center) uses the [Cloudflare Workers](https://workers.cloudflare.com/) service to handle webhooks from services on the KweeksNews Network.
+KweeksHelp (KweeksNews Help Center) built using [Docusaurus 2](https://docusaurus.io/) and hosted on [Cloudflare Pages](https://pages.cloudflare.com/) to provide guidance on using the services on the KweeksNews Network.
+
+## Getting Started
+
+1. Set up the development environment
+
+   You need to set up your development environment before you can do anything.
+
+   Install [Node.js and npm](https://nodejs.org/en/download/).
+
+2. Install the dependencies
+
+   ```bash
+   npm install
+   ```
+
+3. Run in development mode
+
+   ```bash
+   npm start
+   ```
+   
+   This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+
+## Deployment
+
+```bash
+npm run build
+```
+
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
 ### License
 
@@ -22,45 +52,3 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ```
-
-# Website
-
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
-
-### Installation
-
-```
-$ yarn
-```
-
-### Local Development
-
-```
-$ yarn start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-### Build
-
-```
-$ yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
