@@ -4,7 +4,8 @@
     "config:base",
     "schedule:weekends",
     "npm:unpublishSafe",
-    ":semanticCommits"
+    ":semanticCommits",
+    ":pinVersions"
   ],
   "baseBranches": [
     "develop"
