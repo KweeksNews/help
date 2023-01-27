@@ -22,7 +22,7 @@ module.exports = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/KweeksNews/help/tree/main/',
+          editUrl: 'https://github.com/KweeksNews/help/tree/develop/',
         },
         blog: false,
         theme: {
