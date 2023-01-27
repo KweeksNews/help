@@ -5,7 +5,7 @@
     "schedule:weekends",
     "npm:unpublishSafe",
     ":semanticCommits",
-    ":pinVersions"
+    ":pinAllExceptPeerDependencies"
   ],
   "baseBranches": [
     "develop"
