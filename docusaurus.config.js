@@ -70,8 +70,8 @@ module.exports = {
         copyright: `&copy; ${new Date().getFullYear()} <span tabIndex=0>KweeksNews Network</span>. All Rights Reserved.`,
       },
       prism: {
-        theme: require('prism-react-renderer/themes/github'),
-        darkTheme: require('prism-react-renderer/themes/vsDark'),
+        theme: require('prism-react-renderer').themes.github,
+        darkTheme: require('prism-react-renderer').themes.vsDark,
       },
     }),
 };
